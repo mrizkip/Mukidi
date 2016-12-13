@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#18b272</color>
+    <color name="colorPrimaryDark">#14935e</color>
+    <color name="colorAccent">#b21818</color>
+    <color name="text">#ffffff</color>
+    <color name="background">#d2ecd7</color>
+    <color name="aset">#1873b2</color>
+    <color name="asetDark">#FF0D4E7B</color>
+    <color name="budget">#b26f18</color>
+    <color name="review">#18b223</color>
+    <color name="pengeluaran">#da431b</color>
+    <color name="budgetBar">#cdcccc</color>
+    <color name="textGray">#424242</color>
+</resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text"
+    tools:context="com.example.mrizkip.mukidi.DetailAset">
+
+    <!-- Toolbar -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarDetailAset"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp">
+        <TextView
+            android:id="@+id/toolbarDetailAsetText"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:text="NAMA ASET"
+            android:textColor="@color/text"
+            android:textSize="25dp"
+            >
+        </TextView>
+
+    </android.support.v7.widget.Toolbar>
+
+    <!-- Lokasi Aset -->
+    <ImageView
+        android:id="@+id/iconLocation"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/lokasi"
+        android:layout_below="@+id/toolbarDetailAset"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/hintLokasi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Lokasi Aset"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/toolbarDetailAset"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/lokasiAset"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textGray"
+        android:text="Lokasi Aset"
+        android:textSize="18dp"
+        android:backgroundTint="@color/textGray"
+        android:gravity="left"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/toolbarDetailAset" />
+    <View
+        android:id="@+id/lineLokasiAset"
+        android:layout_width="292dp"
+        android:layout_height="1dp"
+        android:background="@color/textGray"
+        android:layout_below="@+id/lokasiAset"
+        android:foregroundGravity="left"
+        android:layout_marginLeft="70dp"
+        android:paddingLeft="10dp"/>
+
+
+    <!-- Tanggal Jatuh Tempo Pajak -->
+    <ImageView
+        android:id="@+id/iconTanggalPajak"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:src="@drawable/kalender"
+        android:layout_below="@+id/iconLocation"
+        android:foregroundGravity="left"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/hintTanggalPajakAset"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Jatuh Tempo Pajak"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/lokasiAset"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tanggalPajakAset"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Tanggal"
+        android:textSize="18dp"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/lokasiAset"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:id="@+id/lineTanggalPajak"
+        android:layout_width="292dp"
+        android:layout_height="1dp"
+        android:background="@color/textGray"
+        android:layout_below="@+id/tanggalPajakAset"
+        android:foregroundGravity="left"
+        android:layout_marginLeft="70dp"
+        android:paddingLeft="10dp"/>
+
+    <!-- Deskripsi Aset -->
+    <ImageView
+        android:id="@+id/iconDeskripsi"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:src="@drawable/deskripsi"
+        android:layout_below="@+id/iconTanggalPajak"
+        android:foregroundGravity="left"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="19dp"
+
+        />
+
+    <TextView
+        android:id="@+id/hintDeskripsiAset"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi Aset"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/lineTanggalPajak"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/deskripsiAset"
+        android:layout_width="300dp"
+        android:layout_height="fill_parent"
+        android:text="Deskripsi Aset"
+        android:textSize="18dp"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/lineTanggalPajak"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

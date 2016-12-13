@@ -1,0 +1,40 @@
+<resources>
+
+    <style name="BudgetTheme" parent="@style/AppTheme">
+        <item name="android:statusBarColor">#895511</item>
+        <item name="android:colorAccent">#19dfcb</item>
+    </style>
+
+    <style name="AsetTheme" parent="@style/AppTheme">
+        <item name="android:statusBarColor">@color/asetDark</item>
+        <item name="android:colorAccent">#e61ece</item>
+    </style>
+
+    <style name="ReviewTheme" parent="@style/AppTheme">
+        <item name="android:statusBarColor">#108419</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="EditTextWhite" parent="@android:style/TextAppearance">
+        <item name="android:colorControlNormal">#c5c5c5</item>
+        <item name="android:colorControlActivated">#ffffff</item>
+        <item name="android:colorControlHighlight">#ffffff</item>
+        <item name="android:colorAccent">#ffffff</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="EditTextGrey" parent="@android:style/TextAppearance">
+        <item name="android:colorControlNormal">#c5c5c5</item>
+        <item name="android:colorControlActivated">@color/textGray</item>
+        <item name="android:colorControlHighlight">@color/textGray</item>
+        <item name="android:colorAccent">@color/textGray</item>
+        <item name="android:textColor">@color/textGray</item>
+    </style>
+</resources>

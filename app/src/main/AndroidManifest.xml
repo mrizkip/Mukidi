@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mrizkip.mukidi"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <uses-sdk tools:overrideLibrary="com.daasuu.ahp"/>
+
+    <application
+        android:name=".MukidiApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Halaman Utama -->
+        <activity android:name=".HalamanUtama">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Menu Transaksi -->
+        <activity
+            android:name=".MenuTransaksi"
+            android:parentActivityName=".HalamanUtama">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HalamanUtama" />
+        </activity>
+        <activity
+            android:name=".TambahTransaksi"
+            android:parentActivityName=".MenuTransaksi">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuTransaksi" />
+        </activity>
+
+        <!-- Menu Aset -->
+        <activity
+            android:name=".MenuAset"
+            android:parentActivityName=".HalamanUtama">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HalamanUtama" />
+        </activity>
+        <!-- Tambah Aset -->
+        <activity
+            android:name=".TambahAset"
+            android:parentActivityName=".MenuAset">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuAset" />
+        </activity>
+        <activity
+            android:name=".DetailAset"
+            android:parentActivityName=".MenuAset">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuAset" />
+        </activity>
+        <activity
+            android:name=".EditAset"
+            android:parentActivityName=".DetailAset">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DetailAset" />
+        </activity>
+
+        <!-- Menu Budget -->
+        <activity
+            android:name=".MenuBudget"
+            android:parentActivityName=".HalamanUtama">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HalamanUtama" />
+        </activity>
+        <activity
+            android:name=".TambahBudget"
+            android:parentActivityName=".MenuBudget">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuBudget" />
+        </activity>
+
+        <!-- Menu Review -->
+        <activity
+            android:name=".MenuReview"
+            android:parentActivityName=".HalamanUtama">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HalamanUtama" />
+        </activity>
+
+        <!-- Mengatur Dompet -->
+        <activity android:name=".MengaturDompet"></activity>
+    </application>
+
+</manifest>

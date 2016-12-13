@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+
+    <TextView
+        android:id="@+id/txtNamaBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Budget"
+        android:textColor="@color/textGray"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:id="@+id/txtRecentNominalBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/txtNamaBudget"
+        android:text="Rp 1.000.000"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        android:gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/txtDariBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="bottom"
+        android:text="dari "
+        android:textColor="@color/textGray"
+        android:layout_alignTop="@+id/txtRecentNominalBudget"
+        android:layout_toRightOf="@+id/txtRecentNominalBudget"
+        android:layout_toEndOf="@+id/txtRecentNominalBudget" />
+
+    <TextView
+        android:id="@+id/txtTotalNominalBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="bottom"
+        android:text="Rp 5.000.000"
+        android:textColor="@color/textGray"
+        android:layout_alignTop="@+id/txtDariBudget"
+        android:layout_toRightOf="@+id/txtDariBudget"
+        android:layout_toEndOf="@+id/txtDariBudget" />
+
+    <com.daasuu.ahp.AnimateHorizontalProgressBar
+        android:id="@+id/animatedProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/txtRecentNominalBudget"
+        android:layout_marginTop="5dp"
+        android:progress="50"
+        app:ahp_backgroundColor="#bfbfbf"
+        app:ahp_progressColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/txtPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/txtRecentNominalBudget"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="50%"
+        android:textColor="@color/text"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtTglAwalBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Desember 2016"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/animatedProgressBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtTglAkhirBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:text="31 Desmber 2016"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/animatedProgressBar"
+        android:layout_alignRight="@+id/animatedProgressBar"
+        android:layout_alignEnd="@+id/animatedProgressBar" />
+
+</RelativeLayout>

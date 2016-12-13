@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtNamaAset"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Nama Aset"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/textGray"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:id="@+id/txtDeskripsiAset"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="Deskripsi Aset"
+        android:textColor="@color/textGray"
+        android:gravity="left|center_vertical"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        />
+</LinearLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text"
+    tools:context="com.example.mrizkip.mukidi.TambahBudget">
+
+    <!-- Toolbar -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarTambahBudget"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/toolbarTambahBudgetText"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:text="Tambah Budget"
+                android:textColor="@color/text"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                >
+            </TextView>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/toolbarTambahBudget"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="15dp"
+        android:background="@color/colorPrimary">
+        <!-- Nama Budget -->
+        <ImageView
+            android:id="@+id/iconNamaBudget"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/savemoney"
+            android:gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_namaBudget"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:hintTextAppearance="@color/text"
+            android:gravity="left"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp">
+            <EditText
+                android:id="@+id/namaBudget"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:textColor="@color/text"
+                android:hint="Nama Budget"
+                android:textColorHint="@color/text"
+                android:backgroundTint="@color/text"
+                >
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Nominal Budget -->
+        <ImageView
+            android:id="@+id/iconNominalBudget"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/uang"
+            android:gravity="left"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="4dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_nominalBudget"
+            style="@style/EditTextWhite"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="left"
+            app:hintTextAppearance="@color/text"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="2dp">
+            <EditText
+                android:id="@+id/nominalBudget"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:textColor="@color/text"
+                android:hint="Jumlah Budget"
+                android:textColorHint="@color/text"
+                android:backgroundTint="@color/text"
+                >
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
+    <!-- Kategori -->
+    <ImageView
+        android:id="@+id/iconKategori"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/kategori"
+        android:layout_below="@+id/toolbarTambahBudget"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/hintKategori"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Budget untuk"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/toolbarTambahBudget"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/kategoriBudget"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textGray"
+        android:text="Pilih Kategori"
+        android:textSize="18dp"
+        android:backgroundTint="@color/textGray"
+        android:gravity="left"
+        android:layout_marginTop="155dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/toolbarTambahBudget" />
+    <View
+        android:id="@+id/lineKategori"
+        android:layout_width="292dp"
+        android:layout_height="1dp"
+        android:background="@color/textGray"
+        android:layout_below="@+id/kategoriBudget"
+        android:foregroundGravity="left"
+        android:layout_marginLeft="70dp"
+        android:paddingLeft="10dp"/>
+
+    <!-- Tanggal Budget -->
+    <ImageView
+        android:id="@+id/iconTanggalPajak"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:src="@drawable/kalender"
+        android:layout_below="@+id/iconKategori"
+        android:foregroundGravity="left"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <!-- Tanggal Awal -->
+    <TextView
+        android:id="@+id/hintTanggalAwal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Awal"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/lineKategori"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tanggalAwalBudget"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="1 Desember 2016"
+        android:textSize="18dp"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/hintTanggalAwal"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- Tanggal Akhir -->
+    <TextView
+        android:id="@+id/hintTanggalAkhir"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Akhir"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/tanggalAwalBudget"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tanggalAkhirBudget"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="31 Desember 2016"
+        android:textSize="18dp"
+        android:textColor="@color/textGray"
+        android:layout_below="@+id/hintTanggalAkhir"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="66dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:id="@+id/lineTanggalPajak"
+        android:layout_width="292dp"
+        android:layout_height="1dp"
+        android:background="@color/textGray"
+        android:layout_below="@+id/tanggalAkhirBudget"
+        android:foregroundGravity="left"
+        android:layout_marginLeft="70dp"
+        android:paddingLeft="10dp"/>
+
+</RelativeLayout>

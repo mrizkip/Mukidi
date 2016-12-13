@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mukidi</string>
+    <string name="title_activity_menu_transaksi">MenuTransaksi</string>
+    <string name="title_activity_menu_aset">MenuAset</string>
+    <string name="title_activity_menu_budget">MenuBudget</string>
+    <string name="title_activity_menu_review">MenuReview</string>
+    <string name="title_activity_dua">DuaActivity</string>
+    <string name="title_activity_wew">wew</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
