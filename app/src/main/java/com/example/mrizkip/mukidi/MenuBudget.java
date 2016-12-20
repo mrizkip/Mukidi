@@ -29,8 +29,8 @@ public class MenuBudget extends AppCompatActivity {
     private ActionBar actionBar;
 
     private RecyclerView recyclerViewBudget;
-    @BindView(R.id.emptyBudget) TextView emptyBudget;
-    @BindView(R.id.emptyBudget2) TextView emptyBudget2;
+    TextView emptyBudget;
+    TextView emptyBudget2;
 
     private BudgetControl budgetControl;
     private List<BudgetModel> listBudget;
@@ -42,8 +42,11 @@ public class MenuBudget extends AppCompatActivity {
         setContentView(R.layout.activity_menu_budget);
         toolbarBudget = (Toolbar) findViewById(R.id.toolbarBudget);
         fabTambahBudget = (FloatingActionButton) findViewById(R.id.fabTambahBudget);
-        ButterKnife.bind(this);
+
         recyclerViewBudget = (RecyclerView) findViewById(R.id.recycler_view_budget);
+        emptyBudget = (TextView) findViewById(R.id.emptyBudget);
+        emptyBudget2 = (TextView) findViewById(R.id.emptyBudget2);
+
 
         if(toolbarBudget != null) {
             setSupportActionBar(toolbarBudget);
@@ -64,6 +67,8 @@ public class MenuBudget extends AppCompatActivity {
             }
         });
 
+        actionBar.setTitle("BUDGET");
+
         budgetControl = new BudgetControl();
         listBudget = budgetControl.getListBudget();
 
@@ -76,10 +81,11 @@ public class MenuBudget extends AppCompatActivity {
             emptyBudget.setVisibility(View.GONE);
             emptyBudget2.setVisibility(View.GONE);
 
-            recyclerViewBudget.setLayoutManager(new LinearLayoutManager(this));
-            SmartAdapter.items(listBudget).map(BudgetModel.class, BudgetView.class)
-                    .into(recyclerViewBudget);
         }
+
+        recyclerViewBudget.setLayoutManager(new LinearLayoutManager(this));
+        SmartAdapter.items(listBudget).map(BudgetModel.class, BudgetView.class)
+                .into(recyclerViewBudget);
     }
 
     @Override

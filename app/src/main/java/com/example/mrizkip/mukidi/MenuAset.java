@@ -20,6 +20,7 @@ import butterknife.ButterKnife;
 import io.nlopez.smartadapters.SmartAdapter;
 
 public class MenuAset extends AppCompatActivity {
+
     private TextView emptyAset;
     private TextView emptyAset2;
 
@@ -80,11 +81,12 @@ public class MenuAset extends AppCompatActivity {
             emptyAset.setVisibility(View.GONE);
             emptyAset2.setVisibility(View.GONE);
 
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            SmartAdapter.items(asetModelList)
-                    .map(AsetModel.class, AsetView.class)
-                    .into(recyclerView);
         }
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        SmartAdapter.items(asetModelList)
+                .map(AsetModel.class, AsetView.class)
+                .into(recyclerView);
     }
 
     @Override

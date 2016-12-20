@@ -1,14 +1,17 @@
 package com.example.mrizkip.mukidi;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 
 /**
@@ -20,10 +23,19 @@ public class TambahPengeluaran extends Fragment {
     private String kategoriPengeluaran;
 
     private boolean isChecking = true;
-    private int mCheckedId = R.id.radioBtnMakanMinum;
+    private int mCheckedId;
+    private TambahTransaksi tambahTransaksi;
 
     public TambahPengeluaran() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if(context instanceof TambahTransaksi) {
+            tambahTransaksi = (TambahTransaksi) context;
+        }
     }
 
     @Override
@@ -47,6 +59,8 @@ public class TambahPengeluaran extends Fragment {
                     isChecking = false;
                     radioGroupPengeluaran2.clearCheck();
                     mCheckedId = checkedId;
+                    pilihKategoriPengeluaran();
+                    tambahTransaksi.updateSelection("Pengeluaran", kategoriPengeluaran);
                 }
                 isChecking = true;
             }
@@ -59,13 +73,15 @@ public class TambahPengeluaran extends Fragment {
                     isChecking = false;
                     radioGroupPengeluaran1.clearCheck();
                     mCheckedId = checkedId;
+                    pilihKategoriPengeluaran();
+                    tambahTransaksi.updateSelection("Pengeluaran", kategoriPengeluaran);
                 }
                 isChecking = true;
             }
         });
     }
 
-    public void pilihKategori() {
+    public void pilihKategoriPengeluaran() {
         if (mCheckedId == R.id.radioBtnMakanMinum) {
             kategoriPengeluaran = "MakanMinum";
         } else if (mCheckedId == R.id.radioBtnBelanja) {
@@ -83,5 +99,10 @@ public class TambahPengeluaran extends Fragment {
         } else if (mCheckedId == R.id.radioBtnTransportasi) {
             kategoriPengeluaran = "Transportasi";
         }
+    }
+
+    public void selectDefault() {
+        radioGroupPengeluaran1.clearCheck();
+        radioGroupPengeluaran2.clearCheck();
     }
 }

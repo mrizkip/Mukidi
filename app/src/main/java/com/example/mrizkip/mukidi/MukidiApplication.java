@@ -2,8 +2,11 @@ package com.example.mrizkip.mukidi;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 
 import org.greenrobot.greendao.database.Database;
+
+import jonathanfinerty.once.Once;
 
 /**
  * Created by mrizkip on 12/6/2016.
@@ -22,6 +25,8 @@ public class MukidiApplication extends Application {
         DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "mukidi-db");
         Database db = helper.getWritableDb();
         daoSession = new DaoMaster(db).newSession();
+
+        Once.initialise(this);
     }
 
     public static MukidiApplication getInstance() {

@@ -1,132 +1,123 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pilih_kategori_budget"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="com.example.mrizkip.mukidi.PilihKategoriBudget"
     android:background="@color/text"
-    tools:context="com.example.mrizkip.mukidi.TambahPengeluaran">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Toolbar -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarPilihKategoriBudget"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    </android.support.v7.widget.Toolbar>
 
     <RadioGroup
-        android:id="@+id/radioGroupPengeluaran1"
+        android:id="@+id/radioGroupPilihKategoriBudget"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
         <RadioButton
-            android:id="@+id/radioBtnMakanMinum"
-            android:layout_width="70dp"
-            android:layout_height="90dp"
-            android:layout_weight="1"
+            android:id="@+id/radioMakanMinum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Makan &amp; Minum"
             android:textAlignment="center"
-            android:textSize="9dp"
             android:textColor="@color/textGray"
-            android:drawableTop="@drawable/makan_minum"
+            android:drawableLeft="@drawable/makan_minum"
             android:drawablePadding="5dp"
             android:layout_margin="5dp"
             android:padding="10dp"
+            android:checked="true"
             android:background="@drawable/custom_button_background"
             android:button="@android:color/transparent"/>
         <RadioButton
-            android:id="@+id/radioBtnBelanja"
-            android:layout_width="70dp"
-            android:layout_height="90dp"
-            android:layout_weight="1"
+            android:id="@+id/radioBelanja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Belanja"
             android:textAlignment="center"
             android:textColor="@color/textGray"
             android:layout_margin="5dp"
             android:padding="10dp"
-            android:drawableTop="@drawable/belanja"
+            android:drawableLeft="@drawable/belanja"
             android:drawablePadding="5dp"
             android:background="@drawable/custom_button_background"
             android:button="@android:color/transparent" />
         <RadioButton
-            android:id="@+id/radioBtnHadiahKeluar"
-            android:layout_width="70dp"
-            android:layout_height="90dp"
-            android:layout_weight="1"
+            android:id="@+id/radioHadiahKeluar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Hadiah"
             android:textAlignment="center"
             android:textColor="@color/textGray"
             android:layout_margin="5dp"
             android:padding="10dp"
-            android:drawableTop="@drawable/hadiah"
+            android:drawableLeft="@drawable/hadiah"
             android:drawablePadding="5dp"
             android:background="@drawable/custom_button_background"
             android:button="@android:color/transparent"/>
         <RadioButton
-            android:id="@+id/radioBtnPendidikan"
-            android:layout_width="70dp"
-            android:layout_height="90dp"
-            android:layout_weight="1"
+            android:id="@+id/radioPendidikan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Pendidikan"
-            android:textSize="12dp"
             android:textAlignment="center"
             android:textColor="@color/textGray"
             android:layout_margin="5dp"
             android:padding="10dp"
-            android:drawableTop="@drawable/pendidikan"
+            android:drawableLeft="@drawable/pendidikan"
             android:drawablePadding="5dp"
             android:background="@drawable/custom_button_background"
             android:button="@android:color/transparent"/>
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/radioGroupPengeluaran2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:orientation="horizontal">
         <RadioButton
-            android:id="@+id/radioBtnHiburan"
-            android:layout_width="70dp"
-            android:layout_height="90dp"
-            android:layout_weight="1"
+            android:id="@+id/radioHiburan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Hiburan"
             android:textAlignment="center"
             android:textColor="@color/textGray"
-            android:drawableTop="@drawable/hiburan"
+            android:drawableLeft="@drawable/hiburan"
             android:drawablePadding="5dp"
             android:layout_margin="5dp"
             android:padding="10dp"
             android:background="@drawable/custom_button_background"
             android:button="@android:color/transparent"/>
         <RadioButton
-            android:id="@+id/radioBtnTagihan"
-            android:layout_width="70dp"
-            android:layout_height="90dp"
-            android:layout_weight="1"
+            android:id="@+id/radioTagihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Tagihan"
             android:textAlignment="center"
             android:textColor="@color/textGray"
             android:layout_margin="5dp"
             android:padding="10dp"
-            android:drawableTop="@drawable/tagihan"
+            android:drawableLeft="@drawable/tagihan"
             android:drawablePadding="5dp"
             android:background="@drawable/custom_button_background"
             android:button="@android:color/transparent" />
         <RadioButton
-            android:id="@+id/radioBtnTraveling"
-            android:layout_width="70dp"
-            android:layout_height="90dp"
-            android:layout_weight="1"
+            android:id="@+id/radioTraveling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Traveling"
             android:textAlignment="center"
             android:textColor="@color/textGray"
             android:layout_margin="5dp"
             android:padding="10dp"
-            android:drawableTop="@drawable/travel"
+            android:drawableLeft="@drawable/travel"
             android:drawablePadding="5dp"
             android:background="@drawable/custom_button_background"
             android:button="@android:color/transparent"/>
         <RadioButton
-            android:id="@+id/radioBtnTransportasi"
-            android:layout_width="70dp"
-            android:layout_height="90dp"
-            android:layout_weight="1"
+            android:id="@+id/radioTransportasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Transportasi"
-            android:textSize="12dp"
             android:textAlignment="center"
             android:textColor="@color/textGray"
             android:layout_margin="5dp"
@@ -137,4 +128,4 @@
             android:button="@android:color/transparent"/>
     </RadioGroup>
 
-</FrameLayout>
+</LinearLayout>

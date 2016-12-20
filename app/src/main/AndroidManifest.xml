@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mrizkip.mukidi"
     xmlns:tools="http://schemas.android.com/tools"
-    >
+    package="com.example.mrizkip.mukidi">
 
-    <uses-sdk tools:overrideLibrary="com.daasuu.ahp"/>
+    <uses-sdk tools:overrideLibrary="com.daasuu.ahp" />
 
     <application
         android:name=".MukidiApplication"
@@ -85,6 +84,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuBudget" />
         </activity>
+        <activity android:name=".PilihKategoriBudget"
+            android:parentActivityName=".TambahBudget">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TambahBudget"/>
+        </activity>
 
         <!-- Menu Review -->
         <activity
@@ -96,7 +101,7 @@
         </activity>
 
         <!-- Mengatur Dompet -->
-        <activity android:name=".MengaturDompet"></activity>
+        <activity android:name=".MengaturDompet" />
     </application>
 
 </manifest>

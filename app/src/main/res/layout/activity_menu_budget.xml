@@ -13,15 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="4dp">
-        <TextView
-            android:id="@+id/toolbarBudgetText"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:text="BUDGET"
-            android:textColor="@color/text"
-            android:textSize="25dp"
-            >
-        </TextView>
     </android.support.v7.widget.Toolbar>
 
     <android.support.design.widget.FloatingActionButton
@@ -40,6 +31,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view_budget"
+        android:layout_below="@id/toolbarBudget"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"

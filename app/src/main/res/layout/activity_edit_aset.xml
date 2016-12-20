@@ -14,27 +14,11 @@
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="50dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/toolbarEditAsetText"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:text="Tambah Aset"
-                android:textColor="@color/text"
-                android:textSize="25dp"
-                android:layout_marginTop="10dp"
-                >
-            </TextView>
-
-        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/toolbarEditAset"
         android:layout_alignRight="@+id/layout_lokasiAset"
         android:layout_alignEnd="@+id/layout_lokasiAset"
@@ -57,14 +41,14 @@
             android:id="@+id/layout_namaAset"
             app:hintTextAppearance="@style/EditTextWhite"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:gravity="left"
             android:layout_marginLeft="65dp">
             <EditText
                 android:id="@+id/namaAset"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:textColor="@color/text"
                 android:hint="Nama Aset"
                 android:textColorHint="@color/text"

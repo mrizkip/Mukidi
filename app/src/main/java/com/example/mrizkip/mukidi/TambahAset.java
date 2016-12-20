@@ -1,6 +1,7 @@
 package com.example.mrizkip.mukidi;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -41,6 +42,8 @@ public class TambahAset extends AppCompatActivity {
     Date dateTanggalPajakAset;
     String strDeskripsiAset;
 
+    private boolean sudahPilihTanggal = false;
+
     DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int monthOfYear,
@@ -50,6 +53,7 @@ public class TambahAset extends AppCompatActivity {
             calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
             updateLabel();
+            sudahPilihTanggal = true;
         }
     };
 
@@ -87,7 +91,7 @@ public class TambahAset extends AppCompatActivity {
     }
 
     private void showDatePicker() {
-        new DatePickerDialog(getApplicationContext(), date, calendar
+        new DatePickerDialog(TambahAset.this, date, calendar
                 .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
@@ -118,10 +122,13 @@ public class TambahAset extends AppCompatActivity {
                 dateTanggalPajakAset = calendar.getTime();
                 strDeskripsiAset = deskripsiAset.getText().toString();
 
-                if(strNamaAset.isEmpty() || strLokasiAset.isEmpty() || strDeskripsiAset.isEmpty()) {
+                if(strNamaAset.trim().isEmpty() || strLokasiAset.isEmpty() || strDeskripsiAset.isEmpty() || !sudahPilihTanggal) {
                     Toast.makeText(TambahAset.this, "Anda harus mengisikan semua form", Toast.LENGTH_SHORT).show();
                 } else {
                     asetControl.addAset(strNamaAset, strLokasiAset, dateTanggalPajakAset, strDeskripsiAset);
+                    Intent intent = new Intent(TambahAset.this, MenuAset.class);
+                    startActivity(intent);
+                    finish(); // finish activity
                 }
 
                 return true;

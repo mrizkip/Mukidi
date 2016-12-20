@@ -118,7 +118,7 @@
         android:id="@+id/tanggalPajakAset"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Tanggal"
+        android:text="Tanggal Jatuh Tempo Pajak"
         android:textSize="18dp"
         android:textColor="@color/textGray"
         android:layout_below="@+id/layout_lokasiAset"
@@ -161,19 +161,22 @@
         android:gravity="left"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="66dp"
-        android:layout_marginBottom="10dp" ></android.support.design.widget.TextInputLayout>
+        android:layout_marginBottom="10dp" >
 
-    <EditText
-        android:id="@+id/deskripsiAset"
-        android:layout_width="300dp"
-        android:layout_height="fill_parent"
-        android:hint="Deskripsi Aset"
-        android:textColorHint="@color/textGray"
-        android:textColor="@color/textGray"
-        android:gravity="top"
-        android:backgroundTint="@color/text"
-        android:layout_below="@+id/tanggalPajakAset"
-        android:layout_alignLeft="@+id/tanggalPajakAset"
-        android:layout_alignStart="@+id/tanggalPajakAset" />
+        <EditText
+            android:id="@+id/deskripsiAset"
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:hint="Deskripsi Aset"
+            android:textColorHint="@color/textGray"
+            android:textColor="@color/textGray"
+            android:gravity="top"
+            android:backgroundTint="@color/text"
+            android:layout_below="@+id/tanggalPajakAset"
+            android:layout_alignLeft="@+id/tanggalPajakAset"
+            android:layout_alignStart="@+id/tanggalPajakAset" />
+    </android.support.design.widget.TextInputLayout>
+
+
 
 </RelativeLayout>

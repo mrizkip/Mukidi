@@ -14,15 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="4dp">
-        <TextView
-            android:id="@+id/toolbarDetailAsetText"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:text="NAMA ASET"
-            android:textColor="@color/text"
-            android:textSize="25dp"
-            >
-        </TextView>
 
     </android.support.v7.widget.Toolbar>
 

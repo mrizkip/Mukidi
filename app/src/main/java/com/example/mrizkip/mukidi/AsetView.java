@@ -3,6 +3,7 @@ package com.example.mrizkip.mukidi;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,7 +18,7 @@ import io.nlopez.smartadapters.views.BindableLinearLayout;
  */
 public class AsetView extends BindableLinearLayout<AsetModel> {
     @BindView(R.id.txtNamaAset) TextView txtNamaAset;
-    @BindView(R.id.deskripsiAset) TextView txtDeskripsiAset;
+    @BindView(R.id.txtDeskripsiAset) TextView txtDeskripsiAset;
 
     public AsetView(Context context) {
         super(context);
@@ -37,7 +38,7 @@ public class AsetView extends BindableLinearLayout<AsetModel> {
     @Override
     public void onViewInflated() {
         ButterKnife.bind(this);
-        super.onViewInflated();
+        setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
     }
 
     @Override
@@ -50,6 +51,7 @@ public class AsetView extends BindableLinearLayout<AsetModel> {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DetailAset.class);
                 intent.putExtra("idAset", asetModel.getIdAset());
+                getContext().startActivity(intent);
             }
         });
     }

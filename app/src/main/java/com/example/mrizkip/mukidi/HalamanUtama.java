@@ -10,9 +10,9 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import jonathanfinerty.once.Once;
 
 public class HalamanUtama extends AppCompatActivity {
-    private UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,13 @@ public class HalamanUtama extends AppCompatActivity {
         List<UserModel> userModels = userControl.checkUser();
         if(userModels.isEmpty()) {
             userControl.addUser();
-        } else {
-            userModel = userModels.get(0);
+        }
+
+        String showMengaturDompet = "showMengaturDompetTag";
+
+        if (!Once.beenDone(Once.THIS_APP_INSTALL, showMengaturDompet)) {
+            startActivity(new Intent(this, MengaturDompet.class));
+            Once.markDone(showMengaturDompet);
         }
     }
 

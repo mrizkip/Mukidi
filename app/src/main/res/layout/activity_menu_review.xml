@@ -13,15 +13,51 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="4dp">
-        <TextView
-            android:id="@+id/toolbarReviewText"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:text="REVIEW"
-            android:textColor="@color/text"
-            android:textSize="25dp"
-            >
-        </TextView>
     </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewReview"
+        android:layout_below="@id/toolbarReview"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="330dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/reviewSaldoText"
+                android:text="Saldo Dompet"
+                android:gravity="center"
+                android:textColor="@color/textGray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:id="@+id/saldoDompet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reviewSaldoText"
+                android:text="Rp 0"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                />
+            <org.eazegraph.lib.charts.BarChart
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/barchart"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_below="@id/saldoDompet"
+                android:padding="10dp"
+                app:egFixedBarWidth="true"
+                app:egBarWidth="20dp"
+                app:egLegendHeight="40dp"
+                app:egShowValues="false"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
 
 </RelativeLayout>
